@@ -4,6 +4,7 @@
     --clr-white: #f7f0f0;
     --clr-gray: #928b8b;
     --clr-red: #f40404;
+    --clr-menu: #170d0f;
 }
 
 * {
@@ -47,6 +48,7 @@ aside {
 .logo {
     font-weight: 400;
     font-size: 1.3rem;
+    color: var(--clr-main-light);
 }
 
 .menu {
@@ -326,6 +328,11 @@ main {
     .boton-menu.active::before,
     .boton-menu.active::after {
         display: none;
+        color: var(--clr-menu);
+    }
+
+    .logo {
+        color: var(--clr-red);
     }
 
     main {
@@ -351,7 +358,7 @@ main {
 
     .open-menu, .close-menu {
         background-color: transparent;
-        color: var(--clr-gray);
+        color: var();
         border: 0;
         font-size: 2rem;
         cursor: pointer;
