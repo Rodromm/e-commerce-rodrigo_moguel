@@ -2,7 +2,7 @@
     {
         "id": "carne machaca",
         "titulo": "carne machaca",
-        "imagen": "../img/carne machaca enero2023.png",
+        "imagen": "./img/carne machaca enero2023.png",
         "categoria": {
             "nombre": "Carne Machaca",
             "id": "carne_machaca"
@@ -12,7 +12,7 @@
     {
         "id": "carne machaca",
         "titulo": "Carne Machaca con papas",
-        "imagen": "../img/burro dos receta.jpg",
+        "imagen": "./img/CARNE MACHACA LA SONORENSE LGO.png",
         "categoria": {
             "nombre": "Carne Machaca",
             "id": "carne_machaca"
@@ -22,7 +22,7 @@
     {
         "id": "carne machaca con cebolla",
         "titulo": "carne machaca con cebolla",
-        "imagen": "../img/burro 4 receta.jpg",
+        "imagen": "./img/MACHACA SONORENSE cuarto kilo.png",
         "categoria": {
             "nombre": "Carne Machaca con Cebolla",
             "id": "carne_machaca"
@@ -32,7 +32,7 @@
     {
         "id": "carne machaca con huevo",
         "titulo": "carne machaca con huevo",
-        "imagen": "./img/abrigos/04.jpg",
+        "imagen": "./img/receta goyi1.png",
         "categoria": {
             "nombre": "Carne Machaca con huevo",
             "id": "carne_machaca"
@@ -42,7 +42,7 @@
     {
         "id": "frijoles",
         "titulo": "frijoles puercos",
-        "imagen": "../img/burro de machca receta.webp",
+        "imagen": "./img/frijoles goyi faceb.jpeg",
         "categoria": {
             "nombre": "Frijoles",
             "id": "frijoles"
@@ -52,7 +52,7 @@
     {
         "id": "frijoles",
         "titulo": "frijoles Rancheros",
-        "imagen": "../img/burro de machca receta.webp",
+        "imagen": "./img/frijoles puercos goyi navidad.jpg",
         "categoria": {
             "nombre": "Frijoles rancheros",
             "id": "frijoles"
@@ -62,7 +62,7 @@
     {
         "id": "Burro de Machca",
         "titulo": "Burro de Machaca",
-        "imagen": "../img/burro dos receta.jpg",
+        "imagen": "./img/¿Se te antojó Verdad.png",
         "categoria": {
             "nombre": "burros",
             "id": "burros"
@@ -72,7 +72,7 @@
     {
         "id": "Burro de Machaca con huevo",
         "titulo": "Burro de Machaca con huevo",
-        "imagen": "../img/carne machaca enero2023.png",
+        "imagen": "./img/Desde sonora.png",
         "categoria": {
             "nombre": "burros",
             "id": "burros"
