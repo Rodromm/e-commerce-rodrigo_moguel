@@ -78,35 +78,6 @@
             "id": "burros"
         },
         "precio": 1000
-    },
-    {
-        "id": "pantalon-03",
-        "titulo": "Pantalón 03",
-        "imagen": "./img/pantalones/03.jpg",
-        "categoria": {
-            "nombre": "Pantalones",
-            "id": "pantalones"
-        },
-        "precio": 1000
-    },
-    {
-        "id": "pantalon-04",
-        "titulo": "Pantalón 04",
-        "imagen": "./img/pantalones/04.jpg",
-        "categoria": {
-            "nombre": "Pantalones",
-            "id": "pantalones"
-        },
-        "precio": 1000
-    },
-    {
-        "id": "pantalon-05",
-        "titulo": "Pantalón 05",
-        "imagen": "./img/pantalones/05.jpg",
-        "categoria": {
-            "nombre": "Pantalones",
-            "id": "pantalones"
-        },
-        "precio": 1000
     }
+    
 ]
