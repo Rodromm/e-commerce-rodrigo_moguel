@@ -316,7 +316,7 @@ main {
         transition: .2s;
     }
 
-    aside-visible {
+    .aside-visible {
         transform: translateX(0);
         opacity: 1;
         visibility: visible;

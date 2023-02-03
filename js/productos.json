@@ -50,7 +50,7 @@
         "precio": 200
     },
     {
-        "id": "frijoles rancheros",
+        "id": "frijoles",
         "titulo": "frijoles Rancheros",
         "imagen": "../img/burro de machca receta.webp",
         "categoria": {
