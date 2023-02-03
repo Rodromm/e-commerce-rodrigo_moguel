@@ -7,38 +7,44 @@ fetch("./js/productos.json")
         cargarProductos(productos);
     })
 
-    const contenedorProductos = document.querySelector("#contenedor-productos");
-    const botonesCategorias = document.querySelectorAll(".boton-categoria");
-    const tituloPrincipal = document.querySelector("#titulo-principal");
-    let botonesAgregar = document.querySelectorAll("#numerito");
 
- botonesCategorias.forEach(boton => boton.addEventListener("clic", () => {
-     aside.classList.remove("aside-visible");
- }))   
+const contenedorProductos = document.querySelector("#contenedor-productos");
+const botonesCategorias = document.querySelectorAll(".boton-categoria");
+const tituloPrincipal = document.querySelector("#titulo-principal");
+let botonesAgregar = document.querySelectorAll(".producto-agregar");
+const numerito = document.querySelector("#numerito");
 
- function cargarProductos(productosElegidos) {
-    
+
+botonesCategorias.forEach(boton => boton.addEventListener("click", () => {
+    aside.classList.remove("aside-visible");
+}))
+
+
+function cargarProductos(productosElegidos) {
+
     contenedorProductos.innerHTML = "";
 
-    productosElegidos.forEach(productp => {
+    productosElegidos.forEach(producto => {
 
         const div = document.createElement("div");
         div.classList.add("producto");
-        div.innerHTML = `<img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
-        <div class="producto-detalles">
-            <h3 class="producto-titulo">${producto.titulo}</h3>
-            <p class="producto-precio">$${producto.precio}</p>
-            <button class="producto-agregar" id="${producto.id}">Agregar</button>
-        </div>
-    `;
+        div.innerHTML = `
+            <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+            <div class="producto-detalles">
+                <h3 class="producto-titulo">${producto.titulo}</h3>
+                <p class="producto-precio">$${producto.precio}</p>
+                <button class="producto-agregar" id="${producto.id}">Agregar</button>
+            </div>
+        `;
 
-    contenedorProductos.append(div);
+        contenedorProductos.append(div);
     })
 
     actualizarBotonesAgregar();
- }
+}
 
- botonesCategorias.forEach(boton => {
+
+botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
 
         botonesCategorias.forEach(boton => boton.classList.remove("active"));
@@ -67,35 +73,37 @@ function actualizarBotonesAgregar() {
 
 let productosEnCarrito;
 
-let productosEnCarritoLs = localStorage.getItem("productos-en-carrito");
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
 
-if (productosEnCarritoLs) {
-    productosEnCarrito = JSON.parse(productosEnCarritoLs);
+if (productosEnCarritoLS) {
+    productosEnCarrito = JSON.parse(productosEnCarritoLS);
     actualizarNumerito();
-}else {
-    productosEnCarrito =[];
+} else {
+    productosEnCarrito = [];
 }
 
 function agregarAlCarrito(e) {
-    toastify({
-        Text: "Producto agregado",
+
+    Toastify({
+        text: "Producto agregado",
         duration: 3000,
         close: true,
-        gravity: "top", //top or bottom
-        position: "right", // left center o right
-        stopOnFocus: true, //
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
-            background: "linear-gradient(to right, #4b33a8, #785ce9)",
-            borderRadius: "2rem",
-            textTransform: "uppercase",
-            fontSize: ".75rem"
+          background: "linear-gradient(to right, #4b33a8, #785ce9)",
+          borderRadius: "2rem",
+          textTransform: "uppercase",
+          fontSize: ".75rem"
         },
-        offSet: {
+        offset: {
             x: '1.5rem', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
             y: '1.5rem' // vertical axis - can be a number or a string indicating unity. eg: '2em'
-        },
-        onclick: function(){}// callback after click
-    }).showToast();
+          },
+        onClick: function(){} // Callback after click
+      }).showToast();
+
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === idBoton);
 
@@ -116,199 +124,3 @@ function actualizarNumerito() {
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
-
-
-
-
-
-
-
-
-
-
-//Productos
-
-/*const productos = [
-    {
-        id: "abrigo-01",
-        titulo: "abrigo-01",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    {
-        id: "abrigo-02",
-        titulo: "abrigo-02",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    {
-        id: "abrigo-03",
-        titulo: "abrigo-03",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    {
-        id: "abrigo-04",
-        titulo: "abrigo-04",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    {
-        id: "abrigo-05",
-        titulo: "abrigo-05",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    //camisetas
-    {
-        id: "camiseta-01",
-        titulo: "camiseta-01",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    {
-        id: "camiseta-02",
-        titulo: "camiseta-02",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    {
-        id: "camiseta-03",
-        titulo: "camiseta-03",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    {
-        id: "camiseta-04",
-        titulo: "camiseta-04",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    {
-        id: "camiseta-05",
-        titulo: "camiseta-05",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    {
-        id: "camiseta-06",
-        titulo: "camiseta-06",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    {
-        id: "camiseta-07",
-        titulo: "camiseta-07",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    {
-        id: "camiseta-08",
-        titulo: "camiseta-08",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    //pantalones
-    {
-        id: "pantalon-01",
-        titulo: "pantalon-01",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    {
-        id: "pantalon-02",
-        titulo: "pantalon-02",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    {
-        id: "pantalon-03",
-        titulo: "pantalon-03",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    {
-        id: "pantalon-04",
-        titulo: "pantalon-04",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    {
-        id: "pantalon-05",
-        titulo: "pantalon-05",
-        imagen:"../img/burro de machca receta.webp",
-        categoria: {
-            nombre: "abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-];*/

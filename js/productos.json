@@ -1,0 +1,112 @@
+[
+    {
+        "id": "carne machaca",
+        "titulo": "carne machaca",
+        "imagen": "../img/carne machaca enero2023.png",
+        "categoria": {
+            "nombre": "Carne Machaca",
+            "id": "carne_machaca"
+        },
+        "precio": 250
+    },
+    {
+        "id": "carne machaca",
+        "titulo": "Carne Machaca con papas",
+        "imagen": "../img/burro dos receta.jpg",
+        "categoria": {
+            "nombre": "Carne Machaca",
+            "id": "carne_machaca"
+        },
+        "precio": 320
+    },
+    {
+        "id": "carne machaca con cebolla",
+        "titulo": "carne machaca con cebolla",
+        "imagen": "../img/burro 4 receta.jpg",
+        "categoria": {
+            "nombre": "Carne Machaca con Cebolla",
+            "id": "carne_machaca"
+        },
+        "precio": 320
+    },
+    {
+        "id": "carne machaca con huevo",
+        "titulo": "carne machaca con huevo",
+        "imagen": "./img/abrigos/04.jpg",
+        "categoria": {
+            "nombre": "Carne Machaca con huevo",
+            "id": "carne_machaca"
+        },
+        "precio": 295
+    },
+    {
+        "id": "frijoles",
+        "titulo": "frijoles puercos",
+        "imagen": "../img/burro de machca receta.webp",
+        "categoria": {
+            "nombre": "Frijoles",
+            "id": "frijoles"
+        },
+        "precio": 200
+    },
+    {
+        "id": "frijoles rancheros",
+        "titulo": "frijoles Rancheros",
+        "imagen": "../img/burro de machca receta.webp",
+        "categoria": {
+            "nombre": "Frijoles rancheros",
+            "id": "frijoles"
+        },
+        "precio": 150
+    },
+    {
+        "id": "Burro de Machca",
+        "titulo": "Burro de Machaca",
+        "imagen": "../img/burro dos receta.jpg",
+        "categoria": {
+            "nombre": "burros",
+            "id": "burros"
+        },
+        "precio": 100
+    },
+    {
+        "id": "Burro de Machaca con huevo",
+        "titulo": "Burro de Machaca con huevo",
+        "imagen": "../img/carne machaca enero2023.png",
+        "categoria": {
+            "nombre": "burros",
+            "id": "burros"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pantalon-03",
+        "titulo": "Pantalón 03",
+        "imagen": "./img/pantalones/03.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pantalon-04",
+        "titulo": "Pantalón 04",
+        "imagen": "./img/pantalones/04.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pantalon-05",
+        "titulo": "Pantalón 05",
+        "imagen": "./img/pantalones/05.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 1000
+    }
+]

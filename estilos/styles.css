@@ -1,9 +1,9 @@
 :root {
-    --clr-main: #4b33a8;
-    --clr-main-light: #785ce9;
-    --clr-white: #ececec;
-    --clr-gray: #e2e2e2;
-    --clr-red: #961818;
+    --clr-main: #0c0b0a;
+    --clr-main-light: #f92205;/*logo footer*/
+    --clr-white: #f7f0f0;
+    --clr-gray: #928b8b;
+    --clr-red: #f40404;
 }
 
 * {

@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>LA SONORENSE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./estilos/styles.css">
-    <title>Document</title>
 </head>
 <body>
-    
 
     <div class="wrapper">
         <header class="header-mobile">
             <h1 class="logo">LA SONORENSE</h1>
             <button class="open-menu" id="open-menu">
-                <i class="bi bi-list"></i>Menú
+                <i class="bi bi-list"></i>Menu
             </button>
         </header>
         <aside>
@@ -32,13 +31,13 @@
                         <button id="todos" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i> Todos los productos</button>
                     </li>
                     <li>
-                        <button id="abrigos" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Carne Machaca</button>
+                        <button id="carne_machaca" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Carne Machaca</button>
                     </li>
                     <li>
-                        <button id="camisetas" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Frijoles</button>
+                        <button id="frijoles" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Frijoles</button>
                     </li>
                     <li>
-                        <button id="pantalones" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Burritos y chimichangas</button>
+                        <button id="burritos" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Burritos</button>
                     </li>
                     <li>
                         <a class="boton-menu boton-carrito" href="./carrrito.html">
@@ -48,19 +47,19 @@
                 </ul>
             </nav>
             <footer>
-                <p class="texto-footer">© 2023 LA SONORENESE</p>
+                <p class="texto-footer">© 2023 La SONORENSE</p>
             </footer>
         </aside>
         <main>
             <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
             <div id="contenedor-productos" class="contenedor-productos">
-                <!-- Esto se va a rellenar con JS -->
+                <!-- JS -->
             </div>
         </main>
     </div>
-
+    
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
